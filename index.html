@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Lifting the lid on the billboard</title>
+    <script language="Javascript">
+      var curIdx = 0;
+      var maxIdx = 12;
+    
+      function goNext()
+      { 
+        document.getElementById("span"+curIdx).style.display = "none";
+
+        curIdx++;
+        if(curIdx > maxIdx)
+          curIdx = 0;
+          
+        document.getElementById("span"+curIdx).style.display = "inline";
+      }
+    
+      function goPrev()
+      { 
+        document.getElementById("span"+curIdx).style.display = "none";
+
+        curIdx--;
+        if(curIdx < 0)
+          curIdx = maxIdx;
+          
+        document.getElementById("span"+curIdx).style.display = "inline";
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <table style="text-align: left;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td colspan="2" style="vertical-align: top; text-align: center; font-family: arial; font-size: 30;">
+              Slogans that crapped out
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="vertical-align: top">
+              <span id="span0" style="display: inline;">
+                <img alt="" src="00_bowl.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span1" style="display: none;">
+                <img alt="" src="01_flush.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span2" style="display: none">
+                <img alt="" src="02_wipe.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span3" style="display: none">
+                <img alt="" src="03_swirly.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span4" style="display: none">
+                <img alt="" src="04_float.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span5" style="display: none">
+                <img alt="" src="05_shizzle.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span6" style="display: none">
+                <img alt="" src="06_urge.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span7" style="display: none">
+                <img alt="" src="07_aim.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span8" style="display: none">
+                <img alt="" src="08_king.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span9" style="display: none">
+                <img alt="" src="09_numberone.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span10" style="display: none">
+                <img alt="" src="10_grunt.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span11" style="display: none">
+                <img alt="" src="11_traffic.jpg" style="width: 495px; height: 372px;">
+              </span>
+              <span id="span12" style="display: none">
+                <img alt="" src="12_pile.jpg" style="width: 495px; height: 372px;">
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;" align="right">
+              <input name="btnPrev" id="btnPrev" value="  <<<  " type="button" onclick="goPrev()">
+            </td>
+            <td style="vertical-align: top;" align="left">
+              <input name="btnNext" id="btnNext" value="  >>>  " type="button" onclick="goNext()">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </body>
+</html>
